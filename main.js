@@ -1,3 +1,8 @@
+//@ts-check
+
+// 型定義ファイルをインポート
+/// <reference path="./node_modules/phina.js.d.ts/globalized/index.d.ts" />
+
 phina.globalize();
 // 定数
 const SCREEN_WIDTH = 640;            // 画面横サイズ
