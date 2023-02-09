@@ -1,6 +1,6 @@
 //@ts-check
 
-// 型定義ファイルをインポート
+// 型定義ファイルを参照
 /// <reference path="./node_modules/phina.js.d.ts/globalized/index.d.ts" />
 
 phina.globalize();
@@ -41,6 +41,7 @@ phina.define('MainScene', {
       const sx = i % PIECE_NUM_X;
       const sy = Math.floor(i / PIECE_NUM_X);
       // 番号
+      /** @type {number} */
       const num = i + 1;
       // ピース作成
       const piece = Piece(num).addChildTo(this.pieceGroup);
@@ -109,7 +110,7 @@ phina.define('MainScene', {
  * @typedef {Object} Piece
  * @property {number} num
  * @property {frameIndex} num
- * @property {indexPos} Vector2
+ * @property {Vector2} indexPos
  *
 phina.define('Piece', {
   // Spriteを継承
