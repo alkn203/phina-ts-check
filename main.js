@@ -36,7 +36,7 @@ phina.define('MainScene', {
   },
   // ピース配置関数
   createPiece: function () {
-    PIECE_NUM.times(function(/** @type {number} */ i) {
+    PIECE_NUM.times(function(i) {
       // グリッド配置用のインデックス値算出
       const sx = i % PIECE_NUM_X;
       const sy = Math.floor(i / PIECE_NUM_X);
@@ -109,7 +109,7 @@ phina.define('Piece', {
   // Spriteを継承
   superClass: 'Sprite',
   // コンストラクタ
-  init: function (/** @type {number} */ num) {
+  init: function (num) {
     // 親クラス初期化
     this.superInit('pieces', PIECE_SIZE, PIECE_SIZE);
     // 数字
